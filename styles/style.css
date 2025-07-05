@@ -1,5 +1,91 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--main-text-font), sans-serif;
+  font-size: var(--base-font-size);
+  line-height: 1.3em;
+  background-image: var(--main-bg-image);
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--main-bg-color);
+  padding-inline: 10px;
+  padding-block: 10px;
+  margin-inline: auto;
 }
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, min-content);
+  block-size: 100vb;
+  min-block-size: 668px;
+}
+
+.corner-decoration {
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;;
+  border-right: 1px solid var(--corner-decoration-color);
+  border-top: 1px solid var(--corner-decoration-color);
+  inset: 0 0 auto auto;
+}
+
+.corner-decoration--rotated {
+  transform: rotate(0.5turn);
+  inset: auto auto 0 0;
+}
+
+.recording-effect {
+  text-transform: uppercase;
+  color: var(--titles-color);
+  position: absolute;
+  line-height: 25px;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recording-effect::after {
+  content: '';
+  display: inline-block;
+  inline-size: 0.5em;
+  block-size: 0.5em;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--titles-color);
+  background-color: var(--titles-color);
+  margin-inline-end: 0.5em;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__title {
+  font-size: var(--mobile-title-size);
+  font-weight: bold;
+  line-height: var(--title-line-height);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px var(--main-title-shadow-color);
+}
+
+.header__text {
+  background-color: var(--text-bg-color);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.break::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* СОМНИТЕЛЬНОЕ РЕШЕНИЕ, КОТОРОЕ, СКОРЕЕ ВСЕГО, ПРИДЕТСЯ ПОТОМ ПЕРЕСМОТРЕТЬ */
