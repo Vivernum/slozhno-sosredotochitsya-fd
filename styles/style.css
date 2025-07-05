@@ -2,8 +2,7 @@
 
 .page {
   font-family: var(--main-text-font), sans-serif;
-  font-size: var(--base-font-size);
-  line-height: 1.3em;
+  line-height: 1.3rem;
   background-image: var(--main-bg-image);
   background-position: center;
   background-attachment: fixed;
@@ -26,8 +25,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;;
-  border-right: 1px solid var(--corner-decoration-color);
-  border-top: 1px solid var(--corner-decoration-color);
+  border-right: 1px solid var(--decoration-color);
+  border-top: 1px solid var(--decoration-color);
   inset: 0 0 auto auto;
 }
 
@@ -38,7 +37,7 @@
 
 .recording-effect {
   text-transform: uppercase;
-  color: var(--titles-color);
+  color: var(--decoration-color);
   position: absolute;
   line-height: 25px;
   inset-inline-end: 0;
@@ -51,12 +50,12 @@
 .recording-effect::after {
   content: '';
   display: inline-block;
-  inline-size: 0.5em;
-  block-size: 0.5em;
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--titles-color);
-  background-color: var(--titles-color);
-  margin-inline-end: 0.5em;
+  box-shadow: 0 0 4px 2px var(--decoration-color);
+  background-color: var(--decoration-color);
+  margin-inline-end: 0.5rem;
 }
 
 .header__theme-menu {
@@ -70,16 +69,16 @@
 }
 
 .header__title {
-  font-size: var(--mobile-title-size);
+  font-size: var(--h1-size);
   font-weight: bold;
-  line-height: var(--title-line-height);
-  color: var(--main-title-color);
-  text-shadow: 4px 4px var(--main-title-shadow-color);
+  line-height: var(--h1-line-height);
+  color: var(--h1-color);
+  text-shadow: 4px 4px var(--h1-shadow-color);
 }
 
 .header__text {
-  background-color: var(--text-bg-color);
-  color: var(--text-color);
+  background-color: var(--h2-colorful-bg-color);
+  color: var(--h2-text-color);
   font-weight: bold;
 }
 
