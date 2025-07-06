@@ -18,10 +18,22 @@
   margin-block: 0 var(--gap);
 }
 
-.page:first-child {
+.page > *:first-child,
+.page > *:nth-last-child(2) {
   margin-block: 0 var(--gap-first-last);
 }
 
+.page > *:last-child {
+  margin-block: 0 0;
+}
+
+/* ТУТ СТОЛКНУЛСЯ С ТАКОЙ ПРОБЛЕМОЙ, ЧТО ИЗ-ЗА 
+   ТАКОЙ КОНСТРУКЦИИ  .PAGE>* СТРАНИЦА ОТОБРАЖАЕТСЯ
+   НЕККОРЕКТНО, ЕСЛИ ЗАПУСКАТЬ ЕЕ ЧЕРЕЗ РАСШИРЕНИЕ
+   ВЕБ-СЕРВЕРА В VS-CODE, ТАК КАК ОН ДОБАВЛЯЕТ 
+   СКРИПТ В КОНЕЦ BODY, И В ТАКОМ СЛУЧАЕ LAST-CHILD И 
+   NTH-LAST-CHILD(2) СЧИТАЮТСЯ НЕ КОРРЕКТНО*/
+ 
 .header {
   position: relative;
   display: grid;
@@ -29,6 +41,7 @@
   grid-template-rows: repeat(3, min-content);
   block-size: 100vb;
   min-block-size: 668px;
+  padding-block: 0 10px;
 }
 /* ПРО ПАДДИНГ ВНИЗУ НЕЛЬЗЯ ЗАБЫТЬ */
 
@@ -43,8 +56,13 @@
 
 .corner-decoration--rotated {
   transform: rotate(0.5turn);
-  inset: auto auto 0 0;
+  inset: auto auto 20px 0;
 }
+
+/* КОРОЧЕ, ЗДЕСЬ ТОЖЕ КАКАЯ-ТО ШНЯГА С ОТСУПАМИ
+   ПОЧЕМУ-ТО НУЖНО 20PX В ЗАПАСЕ СНИЗУ, ЧТОБЫ 
+   СОШЛОСЬ С МАКЕТОМ
+   ПОКА НЕ ВИЖУ, ГДЕ ПРОСЧИТАЛСЯ, МОЖЕТ, ПОТОМ УВИЖУ */
 
 .recording-effect {
   text-transform: uppercase;
@@ -73,6 +91,8 @@
   justify-self: end;
   margin-block: 65px 0;
 }
+
+/* НАДО БУДЕТ ПРОСТО ПОМНИТЬ ПРО ОТСТУПЫ, ВОЗМОЖНО, ПРИДЕТСЯ ЗАПАРИТЬСЯ С ИХ GOMU GOMU СВОЙСТВАМИ */
 
 .header__theme-menu-list {
   display: flex;
@@ -131,3 +151,44 @@
 }
 
 /* СОМНИТЕЛЬНОЕ РЕШЕНИЕ, КОТОРОЕ, СКОРЕЕ ВСЕГО, ПРИДЕТСЯ ПОТОМ ПЕРЕСМОТРЕТЬ */
+
+/*  */
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 20px;
+}
+
+.title-decor {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: bold;
+}
+
+.section__title {
+  color: var(--h2-text-color);
+}
+
+.section__text-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 10px;
+}
+
+.section__card__title {
+  color: var(--h3-text-color);
+  background-color: var(--h3-bg-color);
+}
+
+.section__card__text {
+  color: var(--main-text-color);
+}
+
+.text-link {
+  text-shadow: 2px 2px var(--h1-accent-color);
+}
+
+.text-link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
