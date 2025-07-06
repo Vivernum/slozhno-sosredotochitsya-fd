@@ -68,6 +68,27 @@
   gap: 10px;
 }
 
+.header__theme-menu-button {
+  line-height: 1rem;
+  text-transform: lowercase;
+  background-color: transparent;
+  color: var(--button-color);
+  border: none;
+  padding-inline: 13px;
+  padding-block: 1.5px;
+}
+
+.header__theme-menu-button_active {
+  outline: solid 1px var(--button-color);
+}
+
+.header__theme-menu-button:not(:disabled):hover{
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--button-color);
+}
+
+/* ПОДУМАТЬ ЗАВТРА НАД ПРОБЛЕМОЙ, ОНА ДОВОЛЬНО ИНТЕРЕСНАЯ */
+
 .header__title {
   font-size: var(--h1-size);
   font-weight: bold;
