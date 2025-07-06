@@ -6,15 +6,17 @@
   --main-bg-color: #000028;
   --main-bg-image: url(../images/cover-image-dark.png);
   --main-text-font: IBM Plex mono;
-  --base-font-size: 18px;
-  --h1-size: 116px;
+  --base-font-size: 16px;
+  --h1-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --h1-color: #DB00FF;
-  --h1-shadow-color: #FF0070;
+  --h1-accent-color: #FF0070;
   --h1-line-height: 83%;
-  --h2-colorful-bg-color: #FF0070;
-  --h2-text-color: #000028;
-  --h2-reversed-bg-color: #000028;
-  --h2-reversed-text-color: #FF0070;
+  --h3-bg-color: #FF0070;
+  --h3-text-color: #000028;
+  --h2--bg-color: #000028;
+  --h2--text-color: #FF0070;
   --decoration-color: #FF0070;
   --button-color: #FF0070;
+  --gap: 50px;
+  --gap-first-last: 40px;
 }
