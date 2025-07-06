@@ -163,7 +163,10 @@
 .title-decor {
   font-size: inherit;
   line-height: inherit;
-  font-weight: bold;
+}
+
+.title-decor--regular {
+  font-weight: normal;
 }
 
 .section__title {
