@@ -192,3 +192,17 @@
 .text-link:hover {
   border-bottom: 1px solid var(--main-text-color);
 }
+
+.in-images {
+  gap: 10px;
+}
+
+.in-images__image {
+  object-fit: contain;
+  max-block-size: 100%;
+  max-inline-size: 100%;
+}
+
+.footer {
+  
+}
