@@ -76,18 +76,26 @@
   border: none;
   padding-inline: 13px;
   padding-block: 1.5px;
+  position: relative;
 }
 
 .header__theme-menu-button_active {
   outline: solid 1px var(--button-color);
 }
 
-.header__theme-menu-button:not(:disabled):hover{
-  cursor: pointer;
-  box-shadow: 0 0 0 1px var(--button-color);
-}
+/* ДАЛЕЕ РЕШЕНИЕ ДЛЯ HOVER, КОТОРОЕ РАБОТАЕТ В КОНТЕКСТЕ МЕНЮ С ЧЕТЫРЬМЯ БУКАВАМИ
+   СДЕЛАЛ ИМЕННО ТАК, ТАК КАК ПОДУМАЛ, ЧТО НУЖНО ИЗБЕЖАТЬ ИСАОЛЬЗОВАНИЯ АЛЬФАКАНАЛА */
 
-/* ПОДУМАТЬ ЗАВТРА НАД ПРОБЛЕМОЙ, ОНА ДОВОЛЬНО ИНТЕРЕСНАЯ */
+.header__theme-menu-button:not(:disabled):hover::after {
+  content: 'дддд';
+  position: absolute;
+  inset: 0 auto auto 0;
+  color: transparent;
+  padding-inline: 13px;
+  padding-block: 1.5px;
+  outline: solid 1px var(--button-color);
+  opacity: 0.4;
+}
 
 .header__title {
   font-size: var(--h1-size);
