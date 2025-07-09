@@ -33,7 +33,12 @@
    НЕККОРЕКТНО, ЕСЛИ ЗАПУСКАТЬ ЕЕ ЧЕРЕЗ РАСШИРЕНИЕ
    ВЕБ-СЕРВЕРА В VS-CODE, ТАК КАК ОН ДОБАВЛЯЕТ 
    СКРИПТ В КОНЕЦ BODY, И В ТАКОМ СЛУЧАЕ LAST-CHILD И 
-   NTH-LAST-CHILD(2) СЧИТАЮТСЯ НЕ КОРРЕКТНО*/
+   NTH-LAST-CHILD(2) СЧИТАЮТСЯ НЕКОРРЕКТНО*/
+
+/* ТА ЖЕ ИСТОРИЯ ВОЗНИКАЕТ С PIXELPERFECT, ОН ТОЖЕ 
+   ДОБАВЛЯЕТ СВОЙ СКРИПТ В BODY ИЗ-ЗА ЧЕГО ПОСЛЕДНИЙ
+   БЛОК ОТОБРАЖАЕТСЯ НЕКОРРЕКТНО. ЕСЛИ ОТКРЫТЬ ПРОСТО
+   ЧЕРЕЗ ФАЙЛ, ТО ВСЕ НОРМ*/
  
 .header {
   position: relative;
@@ -159,7 +164,7 @@
   gap: 20px;
 }
 
-.ways-of-overcoming__wrapper {
+.section__wrapper {
   display: grid;
   row-gap: 20px;
 }
@@ -286,16 +291,20 @@
     grid-column: 2 / -1;
   }
 
+  .reasons-for-low-efficiency {
+    grid-template-rows: repeat(2, min-content);
+  }
+
   .reasons-for-low-efficiency .section__title {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
-  .reasons-for-low-efficiency .section__text-card {
+  .reasons-for-low-efficiency .section__wrapper {
     grid-column: 1 / -1;
+    grid-row: 2 / -1;
   }
 
-  /*  */
   .ways-of-overcoming {
     grid-template-columns: 1fr 2fr;
   }
@@ -305,9 +314,7 @@
     grid-row: 1 / -1;
   }
 
-  .ways-of-overcoming__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, 1fr);
+  .section__wrapper {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
   }
@@ -320,8 +327,11 @@
   .ways-of-overcoming .section__text-card {
     grid-column: 2 / -1;
   }
+
 /* ТУТ БУДТО ПОЛНЫЙ ХАОС ПОСЛЕ ДОБАВЛЕНИЯ ОБЕРТКИ,
    НО ОНО ПОЧЕМУ-ТО ПОКА РАБОТАЕТ */
+
+  /* ДАЛЕЕ СЕТКА ДЛЯ ФОТОКАРТОЧЕК */
 
   .in-images {
     grid-template-columns: repeat(3, 1fr);
@@ -337,8 +347,6 @@
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
-
-  /* ДАЛЕЕ СЕТКА ДЛЯ ФОТОКАРТОЧЕК */
 
   .sunset {
     grid-column: 1 / -2 ;
@@ -400,15 +408,33 @@
   }
 
   .reasons-for-low-efficiency {
-    
+    grid-template-rows: repeat(2, min-content);
   }
 
   .reasons-for-low-efficiency .section__title {
-    
+    grid-row: 1 / 2;
   }
 
-  .reasons-for-low-efficiency .section__text-card {
-    
+  .reasons-for-low-efficiency .section__wrapper > * {
+  grid-column: auto;
+}
+
+/* БЕЗ СТИЛЯ ВЫШЕ КАРТОЧКИ РАСПРЕДЕЛЯЮТСЯ ПО СТРОКАМ,
+   А НЕ ПО КОЛОНКАМ. ФИКСИЛ ЭТО 2 ЧАСА. ПОЛУЧИЛОСЬ МЕТОДОМ ТЫКА. */
+
+  .reasons-for-low-efficiency .section__wrapper {
+    column-gap: 20px;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reasons-for-low-efficiency .section__wrapper .section__text-card {
+    block-size: min-content;
+  }
+
+  .footer {
+    min-block-size: 768px;
   }
 
 }
