@@ -52,7 +52,7 @@
 .corner-decoration {
   position: absolute;
   inline-size: 25px;
-  block-size: 25px;;
+  block-size: 25px;
   border-right: 1px solid var(--decoration-color);
   border-top: 1px solid var(--decoration-color);
   inset: 10px 0 auto auto;
@@ -247,7 +247,7 @@
 
 @media (width >= 768px) {
 
-  .page{
+  .page {
     padding-inline: 20px;
   }
 
@@ -296,7 +296,7 @@
     grid-row: 1 / -1;
   }
 
-  .why-it-is-hard .section__title{
+  .why-it-is-hard .section__title {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
   }
