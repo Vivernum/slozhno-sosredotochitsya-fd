@@ -159,6 +159,11 @@
   gap: 20px;
 }
 
+.ways-of-overcoming__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
 .title-decor {
   font-size: inherit;
   line-height: inherit;
@@ -246,7 +251,7 @@
 
   .header {
     min-block-size: 1024px;
-  grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .header__theme-menu {
@@ -301,12 +306,10 @@
   }
 
   .ways-of-overcoming__wrapper {
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fit, 1fr);
     grid-column: 2 / -1;
     grid-row: 1 / -1;
-    row-gap: 20px;
   }
 
   .ways-of-overcoming .section__card__title {
@@ -368,6 +371,44 @@
 
 }
 
-@media (width > 1024px) {
-  
+@media (width >= 1024px) {
+
+  .header {
+    min-block-size: 768px;
+  }
+
+  .header__theme-menu {
+    grid-column: 1 / -1;
+    margin-block: 20px 0;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    margin-block: 273px 0;
+  }
+
+  .header__text {
+    margin-block: 114px 134px;
+  }
+
+  .section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reasons-for-low-efficiency {
+    
+  }
+
+  .reasons-for-low-efficiency .section__title {
+    
+  }
+
+  .reasons-for-low-efficiency .section__text-card {
+    
+  }
+
 }
