@@ -132,6 +132,11 @@
   opacity: 0.4;
 }
 
+.header__theme-menu-button:not(:disabled):focus-visible {
+  border-bottom: 1px solid var(--button-color);
+  margin-block: -1px 0;
+}
+
 .header__title {
   margin-block: 65px 0;
   font-size: var(--h1-size);
@@ -205,6 +210,10 @@
   border-bottom: 1px solid var(--main-text-color);
 }
 
+.text-link:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
 .in-images {
   gap: 10px;
 }
@@ -235,7 +244,7 @@
 }
 
 /* МЕДИАЗАПРОСЫ */
-/* Не забыыть пофиксить условие > */
+
 @media (width >= 768px) {
 
   .page{
