@@ -24,6 +24,15 @@
     --decoration-color: #353430;
     --button-color: #353430;
   }
+
+  .off-the-screen {
+    color: transparent;
+  }
+
+  .recording-effect::after {
+    display: none;
+  }
+
 }
 
 .theme-light .off-the-screen {
