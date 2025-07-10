@@ -15,30 +15,17 @@
   display: grid;
 }
 
-.page > * {
+.main > * {
   margin-block: 0 var(--gap);
 }
 
-.page > *:first-child,
-.page > *:nth-last-child(2) {
+.main > *:first-child {
+  margin-block: var(--gap-first-last) var(--gap);
+}
+
+.main > *:last-child {
   margin-block: 0 var(--gap-first-last);
 }
-
-.page > *:last-child {
-  margin-block: 0 0;
-}
-
-/* ТУТ СТОЛКНУЛСЯ С ТАКОЙ ПРОБЛЕМОЙ, ЧТО ИЗ-ЗА 
-   ТАКОЙ КОНСТРУКЦИИ  .PAGE>* СТРАНИЦА ОТОБРАЖАЕТСЯ
-   НЕККОРЕКТНО, ЕСЛИ ЗАПУСКАТЬ ЕЕ ЧЕРЕЗ РАСШИРЕНИЕ
-   ВЕБ-СЕРВЕРА В VS-CODE, ТАК КАК ОН ДОБАВЛЯЕТ 
-   СКРИПТ В КОНЕЦ BODY, И В ТАКОМ СЛУЧАЕ LAST-CHILD И 
-   NTH-LAST-CHILD(2) СЧИТАЮТСЯ НЕКОРРЕКТНО*/
-
-/* ТА ЖЕ ИСТОРИЯ ВОЗНИКАЕТ С PIXELPERFECT, ОН ТОЖЕ 
-   ДОБАВЛЯЕТ СВОЙ СКРИПТ В BODY ИЗ-ЗА ЧЕГО ПОСЛЕДНИЙ
-   БЛОК ОТОБРАЖАЕТСЯ НЕКОРРЕКТНО. ЕСЛИ ОТКРЫТЬ ПРОСТО
-   ЧЕРЕЗ ФАЙЛ, ТО ВСЕ НОРМ*/
  
 .header {
   position: relative;
