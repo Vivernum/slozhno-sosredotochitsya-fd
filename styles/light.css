@@ -2,11 +2,11 @@
   --main-bg-color: #FFF1F7;
   --main-bg-image: url(../images/cover-image-light.png);
   --main-text-color: #353430;
-  --h1-color: #FFC2E6;
-  --h1-accent-color: #FF8DCB;
-  --h3-bg-color: #FF8DCB;
-  --h3-text-color: #353430;
-  --h2-text-color: #353430;
+  --main-title-color: #FFC2E6;
+  --main-title-accent-color: #FF8DCB;
+  --section-title-color: #353430;
+  --cards-title-bg-color: #FF8DCB;
+  --cards-text-color: #353430;
   --decoration-color: #353430;
   --button-color: #353430;
 }
@@ -16,11 +16,11 @@
     --main-bg-color: #FFF1F7;
     --main-bg-image: url(../images/cover-image-light.png);
     --main-text-color: #353430;
-    --h1-color: #FFC2E6;
-    --h1-accent-color: #FF8DCB;
-    --h3-bg-color: #FF8DCB;
-    --h3-text-color: #353430;
-    --h2-text-color: #353430;
+    --main-title-color: #FFC2E6;
+    --main-title-accent-color: #FF8DCB;
+    --section-title-color: #353430;
+    --cards-title-bg-color: #FF8DCB;
+    --cards-text-color: #353430;
     --decoration-color: #353430;
     --button-color: #353430;
   }

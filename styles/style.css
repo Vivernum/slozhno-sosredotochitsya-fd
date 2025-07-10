@@ -115,6 +115,7 @@
 
 .header__theme-menu-button_active {
   outline: solid 1px var(--button-color);
+  pointer-events: none;
 }
 
 /* ДАЛЕЕ РЕШЕНИЕ ДЛЯ HOVER, КОТОРОЕ РАБОТАЕТ В КОНТЕКСТЕ МЕНЮ С ЧЕТЫРЬМЯ БУКАВАМИ
@@ -139,16 +140,16 @@
 
 .header__title {
   margin-block: 65px 0;
-  font-size: var(--h1-size);
+  font-size: var(--main-title-size);
   font-weight: bold;
-  line-height: var(--h1-line-height);
-  color: var(--h1-color);
-  text-shadow: 4px 4px var(--h1-accent-color);
+  line-height: var(--main-title-line-height);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px var(--main-title-accent-color);
 }
 
 .header__text {
-  background-color: var(--h3-bg-color);
-  color: var(--h3-text-color);
+  background-color: var(--cards-title-bg-color);
+  color: var(--cards-text-color);
   font-weight: bold;
   margin-block: 55px;
 }
@@ -170,7 +171,7 @@
 }
 
 .section__title {
-  color: var(--h2-text-color);
+  color: var(--section-title-color);
 }
 
 .title-decor {
@@ -194,8 +195,8 @@
 }
 
 .section__card__title {
-  color: var(--h3-text-color);
-  background-color: var(--h3-bg-color);
+  color: var(--cards-text-color);
+  background-color: var(--cards-title-bg-color);
 }
 
 .section__card__text {
@@ -203,15 +204,15 @@
 }
 
 .text-link {
-  text-shadow: 2px 2px var(--h1-accent-color);
+  text-shadow: 2px 2px var(--main-title-accent-color);
 }
 
 .text-link:hover {
-  border-bottom: 1px solid var(--main-text-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .text-link:focus-visible {
-  outline: 1px solid var(--main-text-color);
+  outline: 1px solid currentColor;
 }
 
 .in-images {
@@ -236,11 +237,11 @@
 }
 
 .footer__title {
-  font-size: var(--h1-size);
+  font-size: var(--main-title-size);
   font-weight: bold;
-  line-height: var(--h1-line-height);
-  color: var(--h1-color);
-  text-shadow: 2px 2px var(--h1-accent-color);
+  line-height: var(--main-title-line-height);
+  color: var(--main-title-color);
+  text-shadow: 2px 2px var(--main-title-accent-color);
 }
 
 /* МЕДИАЗАПРОСЫ */

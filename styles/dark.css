@@ -2,11 +2,11 @@
   --main-bg-color: #000028;
   --main-bg-image: url(../images/cover-image-dark.png);
   --main-text-color: #F1B2CE;
-  --h1-color: #DB00FF;
-  --h1-accent-color: #FF0070;
-  --h3-bg-color: #FF0070;
-  --h3-text-color: #000028;
-  --h2-text-color: #FF0070;
+  --main-title-color: #DB00FF;
+  --main-title-accent-color: #FF0070;
+  --section-title-color: #FF0070;
+  --cards-title-bg-color: #FF0070;
+  --cards-text-color: #000028;
   --decoration-color: #FF0070;
   --button-color: #FF0070;
 }
