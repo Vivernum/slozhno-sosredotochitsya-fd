@@ -16,15 +16,15 @@
 }
 
 .main > * {
-  margin-block: 0 var(--gap);
+  margin-block: 0 var(--section-gap);
 }
 
 .main > *:first-child {
-  margin-block: var(--gap-first-last) var(--gap);
+  margin-block: var(--section-gap-decreased) var(--section-gap);
 }
 
 .main > *:last-child {
-  margin-block: 0 var(--gap-first-last);
+  margin-block: 0 var(--section-gap-decreased);
 }
  
 .header {

@@ -10,3 +10,11 @@
   --decoration-color: #FF0070;
   --button-color: #FF0070;
 }
+
+.theme-dark .off-the-screen {
+  color: var(--decoration-color);
+}
+
+.theme-dark .recording-effect::after {
+  display: initial;
+}
